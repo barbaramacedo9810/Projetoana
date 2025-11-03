@@ -1,0 +1,228 @@
+/* ==========================
+   ESTILO GERAL - Fumaça de Lavanda
+   ========================== */
+
+/* Paleta de cores */
+:root {
+    --lavanda: #C6B4CE;
+    --lavanda-escuro: #9C84A6;
+    --bege: #F5F2EC;
+    --branco: #FFFFFF;
+    --cinza: #5A5A5A;
+    --grafite: #2D2D2D;
+}
+
+/* Reset básico e tipografia */
+body {
+    font-family: 'News Cycle', sans-serif;
+    color: var(--cinza);
+    background-color: var(--bege);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'DM Serif Text', serif;
+    color: var(--grafite);
+    letter-spacing: 0.5px;
+}
+
+/* ==========================
+   NAVBAR
+   ========================== */
+.navbar {
+    background-color: var(--branco) !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.5rem;
+    color: var(--grafite);
+}
+
+.navbar-nav .nav-link {
+    color: var(--grafite);
+    font-weight: 500;
+    margin-left: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--lavanda-escuro);
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--lavanda-escuro);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* ==========================
+   HERO SECTION
+   ========================== */
+.hero {
+    background: linear-gradient(rgba(245, 242, 236, 0.7), rgba(245, 242, 236, 0.7)),
+    url('../img/bg-hero.jpg') center/cover no-repeat;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero h1 {
+    color: var(--grafite);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--cinza);
+    max-width: 650px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+}
+
+/* Botão principal */
+.btn-lavanda {
+    background-color: var(--lavanda-escuro);
+    color: var(--branco);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-lavanda:hover {
+    background-color: var(--lavanda);
+    color: var(--grafite);
+    box-shadow: 0 4px 12px rgba(156, 132, 166, 0.4);
+}
+
+/* ==========================
+   SEÇÕES
+   ========================== */
+section {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-transform: none;
+    color: var(--grafite);
+}
+
+/* ==========================
+   SOBRE NÓS
+   ========================== */
+#sobre p {
+    font-size: 1rem;
+    color: var(--cinza);
+}
+
+/* ==========================
+   PRODUTOS
+   ========================== */
+#produtos {
+    background-color: var(--branco);
+}
+
+.produto-card {
+    background: var(--bege);
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.produto-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid var(--lavanda-escuro);
+}
+
+.produto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.produto-card h5 {
+    font-family: 'DM Serif Text', serif;
+    color: var(--grafite);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================
+   PROPÓSITO
+   ========================== */
+#proposito {
+    background: linear-gradient(to bottom right, #f8f6f2, #f2edf8);
+}
+
+#proposito p {
+    color: var(--cinza);
+    font-size: 1.05rem;
+}
+
+/* ==========================
+   CONTATO
+   ========================== */
+#contato .btn-lavanda {
+    font-size: 1.1rem;
+    padding: 12px 28px;
+    border-radius: 40px;
+}
+
+/* ==========================
+   RODAPÉ
+   ========================== */
+footer {
+    background-color: var(--branco);
+    color: var(--cinza);
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+   ========================== */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+    .section-title {
+        font-size: 1.9rem;
+    }
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 0.5rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        background-position: center;
+        padding-top: 100px;
+    }
+    .hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
