@@ -101,17 +101,19 @@ h1, h2, h3, h4, h5 {
     padding-top: 80px;
 }
 
-.hero h1 {
-    color: var(--grafite);
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.hero-logo {
+    width: 480px;
+    height: auto;
+    margin: 0 auto 0.5rem auto; /* imagem centralizada + espaçamento controlado */
+    display: block;
 }
 
 .hero p {
     color: var(--cinza);
     max-width: 650px;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 1.5rem auto;
     font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 /* Botão principal */
@@ -258,3 +260,5 @@ footer {
         padding: 0 1rem;
     }
 }
+
+
